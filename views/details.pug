@@ -1,0 +1,30 @@
+extends layout.pug
+
+block content
+    #detailsHead 
+        h2#title.details
+        div 
+            button#editBtn     
+                i.far.fa-edit
+    div#detailsMain
+        img#image.details
+        div#detailsDescription
+            span#spanTime 
+            h3#descHeader Description
+            p#description.details
+        p#description.details
+    #editScreen 
+        button#closeEditScreen
+            i.fas.fa-times
+        #editFormContainer 
+            #editForm 
+                h1.editScreenHeader Update
+                form#formcreate.update(method="POST" action="/create" enctype="multipart/form-data")
+                    label.label Title
+                    input(class="input image-title" name="title")
+                    label.label Image
+                    input(type="file" name="image" class="input image-image" accept="image/*")
+                    label.label Description
+                    textarea(class="input image-desc" name="description" rows="7")
+                    button.update-note-btn#btnUpdate Upload  
+    script(src="/scripts/details.js") 

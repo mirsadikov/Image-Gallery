@@ -1,0 +1,17 @@
+extends layout.pug
+
+block content
+  h2#createHeader Create new image
+  div#createContainer
+    if error 
+      p.error= error
+    if success 
+      p.success Uploaded successfully 
+    form#formcreate(method="POST" action="/create" enctype="multipart/form-data")
+      label.label Title
+      input(class="input image-title" name="title")
+      label.label Image
+      input(type="file" name="image" class="input image-image" accept="image/*")
+      label.label Description
+      textarea(class="input image-desc" name="description" rows="7")
+      button.upload-note-btn#btn Upload   

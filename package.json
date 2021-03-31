@@ -1,0 +1,27 @@
+{
+  "name": "webtech.cw2.12860",
+  "version": "1.0.0",
+  "description": "This is coursework for Web Technology module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "npx nodemon"
+  },
+  "keywords": [
+    "Node.js",
+    "Express.js",
+    "Pug",
+    "WIUT",
+    "WebTech"
+  ],
+  "author": "00012860",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

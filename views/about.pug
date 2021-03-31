@@ -1,0 +1,36 @@
+extends layout.pug
+
+block content 
+    .bodyAbout
+        h1.header.about Web technology 
+        h2.sectionHeader.about About 
+        .sectionBody 
+            p.info.about This is a simple images gallery application. It stores single image, title, time and description to database. 
+            ul.func.about Functionalty
+                li Create 
+                li Read 
+                li Update 
+                li Delete 
+        
+        h2.sectionHeader.about Installation 
+        .sectionBody 
+            p.install.about Install dependencies 
+            code npm install
+            p.install.about Run application
+            code npm start 
+        h2.sectionHeader.about Dependencies 
+        .sectionBody 
+            ul.about Web dependencies 
+                li Express 
+                li Multer 
+                li Pug
+            ul.about Dev dependencies 
+                li Nodemon
+            ul.about Frontend Icons 
+                li Fontawesome
+        h2.sectionHeader.about Repo  
+        .sectionBody 
+            p.about  Repo at 
+                a.repo(href="https://github.com/wiut00012860/WebTech.CW2.12860") Github
+            p.about  Application link is 
+                a.repo(href="http://example.com") here  

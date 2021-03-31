@@ -1,0 +1,11 @@
+extends layout.pug
+
+block content
+    h2#head.allimages All images 
+    div#container.allimages
+      if error 
+        p.error= error
+      if success 
+        p.success Deleted successfully 
+      ul#tablecontainer
+    script(src="/scripts/all_images.js") 
