@@ -5,8 +5,7 @@ const createRoute = require("./routes/CreateRoute");
 const allImagesRoute = require("./routes/AllImagesRoute");
 const API = require("./routes/API");
 
-dotenv.config();
-const PORT = 5000 || process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const app = epxress();
 
 // express config
