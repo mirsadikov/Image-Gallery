@@ -4,7 +4,7 @@ const createRoute = require("./routes/CreateRoute");
 const allImagesRoute = require("./routes/AllImagesRoute");
 const API = require("./routes/API");
 
-const PORT = 8001;
+const PORT = 3000 || process.env.PORT;
 const app = epxress();
 
 // express config
