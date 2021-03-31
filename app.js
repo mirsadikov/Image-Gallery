@@ -1,5 +1,4 @@
 const epxress = require("express");
-const dotenv = require("dotenv");
 
 const createRoute = require("./routes/CreateRoute");
 const allImagesRoute = require("./routes/AllImagesRoute");
