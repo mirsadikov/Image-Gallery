@@ -4,7 +4,7 @@
   "description": "This is coursework for Web Technology module",
   "main": "app.js",
   "scripts": {
-    "start": "node app",
+    "start": "node app.js",
     "dev": "npx nodemon"
   },
   "keywords": [
