@@ -10,10 +10,17 @@ function populate(data) {
   data.map((one) => {
     var newNode = document.createElement("li");
     newNode.className = "image";
-    var title = document.createElement("a");
-    title.href = `/allimages/${one.id}`;
-    title.className = "title";
+    var titleContainer = document.createElement("a");
+    titleContainer.href = `/allimages/${one.id}`;
+    // titleContainer.className = "titleContainer";
+    var titleImage = document.createElement("img");
+    titleImage.src = one.path;
+    titleImage.id = "titleImage";
+    var title = document.createElement("p");
+    title.id = "title";
     title.textContent = one.title;
+    titleContainer.appendChild(titleImage);
+    titleContainer.appendChild(title);
 
     var del = document.createElement("a");
     del.classList.add("delBtn");
@@ -22,7 +29,7 @@ function populate(data) {
     delBtn.classList.add("far", "fa-trash-alt");
     del.appendChild(delBtn);
 
-    newNode.appendChild(title);
+    newNode.appendChild(titleContainer);
     newNode.appendChild(del);
 
     container.appendChild(newNode);
