@@ -1,18 +1,22 @@
 var container = document.getElementById("tablecontainer");
 
+// get data from api on window load
 window.onload = () => {
   fetch("/api/v1/allimages")
     .then((response) => response.json())
     .then((data) => populate(data));
 };
 
+// show data in table list
 function populate(data) {
   data.map((one) => {
+    //     +----------------------------------------------+
+    //     |    image   |  title               |  delete  |
+    //     +----------------------------------------------+
     var newNode = document.createElement("li");
     newNode.className = "image";
     var titleContainer = document.createElement("a");
     titleContainer.href = `/allimages/${one.id}`;
-    // titleContainer.className = "titleContainer";
     var titleImage = document.createElement("img");
     titleImage.src = one.path;
     titleImage.id = "titleImage";

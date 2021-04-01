@@ -4,6 +4,7 @@ const path = require("path");
 const { root } = require("../utils");
 const fs = require("fs");
 
+// get all
 router.get("/", (req, res) => {
   fs.readFile(path.join(root, "database/db.json"), (err, data) => {
     if (err) throw new Error();
@@ -12,6 +13,7 @@ router.get("/", (req, res) => {
   });
 });
 
+// get one by id
 router.get("/:id", (req, res) => {
   fs.readFile(path.join(root, "database/db.json"), (err, data) => {
     if (err) throw new Error();

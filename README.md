@@ -19,15 +19,21 @@ This is a simple images gallery application. It stores single image, title, time
 
 <br />
 
-Install dependencies
+1. Clone the Source Code
 
-```shell
+```bash
+git clone https://github.com/wiut00012860/WebTech.CW2.12860
+```
+
+2. Install dependencies
+
+```bash
 npm install
 ```
 
-Run application
+3. Run application
 
-```shell
+```bash
 npm start
 ```
 
