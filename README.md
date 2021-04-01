@@ -2,11 +2,12 @@
 
 ## About
 
-This is a simple images gallery application. It stores single image, title, time and description to database. 
+This is a simple images gallery application. It stores single image, title, time and description to database.
 
 <br />
 
 **Functionality**
+
 - CREATE
 - READ
 - UPDATE
@@ -14,20 +15,22 @@ This is a simple images gallery application. It stores single image, title, time
 
 <br />
 
-
 ## Installation
+
 <br />
 
 Install dependencies
+
 ```shell
 npm install
 ```
 
-
 Run application
+
 ```shell
 npm start
 ```
+
 <br />
 
 ## Dependencies
@@ -35,14 +38,17 @@ npm start
 <br />
 
 Web dependencies
+
 - [Express](https://npmjs.com/package/express)
 - [Multer](https://npmjs.com/package/multer)
 - [Pug](https://npmjs.com/package/pugjs)
 
 Dev dependencies
+
 - [Nodemon](https://npmjs.com/package/nodemon)
 
 Frontend Icons
+
 - [Fontawesome](https://fontawesome.com)
 
 <br />
@@ -53,4 +59,4 @@ Frontend Icons
 
 Repo at [Github](https://github.com/wiut00012860/WebTech.CW2.12860).
 
-Application link is [here](https://example.com).
+Application link at [Heroku](https://wt-12860.herokuapp.com/) or [Glitch](https://example.com/).
