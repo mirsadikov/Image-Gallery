@@ -4,29 +4,7 @@ const fs = require("fs");
 const multer = require("multer");
 const { genereteUID, root, isValid } = require("../utils");
 const path = require("path");
-
-// Multer configuration
-const storageConfig = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, path.join(root, "public/images"));
-  },
-  filename: (req, file, cb) => {
-    cb(null, `${genereteUID()}.${file.mimetype.split("/")[1]}`);
-  },
-});
-
-const multerFilter = (req, file, cb) => {
-  if (file.mimetype.startsWith("image")) {
-    cb(null, true);
-  } else {
-    cb(new Error("Not an image! Please upload an image.", 400), false);
-  }
-};
-
-const upload = multer({
-  storage: storageConfig,
-  fileFilter: multerFilter,
-}).single("image");
+const { upload } = require("../services/multer");
 
 router
   .route("/")
@@ -42,6 +20,12 @@ router
       } else if (req.file == undefined) {
         res.render("create", { error: "Error, upload image file!" });
       } else if (!isValid(req.body)) {
+        fs.unlink(
+          path.join(root, "public/images", req.file.filename),
+          (err) => {
+            if (err) res.render("create", { error: err.message });
+          }
+        );
         res.render("create", { error: "Error, enter description or title!" });
       } else {
         var newdata = {

@@ -1,6 +1,10 @@
 extends layout.pug
 
 block content
+    if error 
+        p.error= error
+    if success 
+        p.success Updated successfully
     #detailsHead 
         h2#title.details
         div 
@@ -19,12 +23,12 @@ block content
         #editFormContainer 
             #editForm 
                 h1.editScreenHeader Update
-                form#formcreate.update(method="POST" action="/create" enctype="multipart/form-data")
+                form#formcreate.update(method="POST" action="/allimages/:id" enctype="multipart/form-data")
                     label.label Title
-                    input(class="input image-title" name="title")
+                    input(class="input image-title" id="editTitle" name="title")
                     label.label Image
                     input(type="file" name="image" class="input image-image" accept="image/*")
                     label.label Description
-                    textarea(class="input image-desc" name="description" rows="7")
-                    button.update-note-btn#btnUpdate Upload  
+                    textarea(class="input image-desc" id="editDesctiption" name="description" rows="7")
+                    button.update-note-btn#btnUpdate Update   
     script(src="/scripts/details.js") 
