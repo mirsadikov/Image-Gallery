@@ -39,6 +39,21 @@ npm start
 
 <br />
 
+## Routes and API
+
+```shell
+|- /
+|- /create
+|- /allimages
+|- /allimages/:id
+|- /allimages/:id/delete
+|- /about
+|- /api/v1/allimages
+|- /api/v1/allimages/:id
+```
+
+<br />
+
 ## Dependencies
 
 <br />
