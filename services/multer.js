@@ -8,21 +8,28 @@ const storageConfig = multer.diskStorage({
     cb(null, path.join(root, "public/images"));
   },
   filename: (req, file, cb) => {
-    cb(null, `${genereteUID()}.${file.mimetype.split("/")[1]}`);
+    cb(null, `${genereteUID()}${path.extname(file.originalname)}`);
   },
 });
 
-const multerFilter = (req, file, cb) => {
-  if (file.mimetype.startsWith("image")) {
-    cb(null, true);
+const multerFilter = (file, cb) => {
+  const filetypes = /jpg|jpeg|png/;
+  console.log(file);
+  const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+  const mimetype = filetypes.test(file.mimetype);
+
+  if (extname && mimetype) {
+    return cb(null, true);
   } else {
-    cb(new Error("Not an image! Please upload an image.", 400), false);
+    cb("Not an image! Please upload an image.");
   }
 };
 
 const upload = multer({
   storage: storageConfig,
-  fileFilter: multerFilter,
+  fileFilter: function (req, file, cb) {
+    multerFilter(file, cb);
+  },
 }).single("image");
 
 module.exports.upload = upload;
