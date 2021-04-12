@@ -47,16 +47,6 @@ nav.nav li {
 }
 
 /* Home page */
-p.moduleinfo {
-  width: 100%;
-  text-align: center;
-  font-family: var(--text-font);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  padding: 10px 50px;
-}
-
 div.home.main {
   display: grid;
   grid-template-columns: 1fr 1fr;

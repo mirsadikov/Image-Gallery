@@ -1,7 +1,6 @@
 {
-  "name": "webtech.cw2.12860",
+  "name": "image-gallery",
   "version": "1.0.0",
-  "description": "This is coursework for Web Technology module",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -10,9 +9,7 @@
   "keywords": [
     "Node.js",
     "Express.js",
-    "Pug",
-    "WIUT",
-    "WebTech"
+    "Pug"
   ],
   "author": "00012860",
   "license": "MIT",
