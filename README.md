@@ -71,13 +71,3 @@ Dev dependencies
 Frontend Icons
 
 - [Fontawesome](https://fontawesome.com)
-
-<br />
-
-## Repo
-
-<br />
-
-Repo at [Github](https://github.com/wiut00012860/WebTech.CW2.12860).
-
-Application link at [Heroku](https://wt-12860.herokuapp.com/) or [Glitch](https://protective-grave-crayfish.glitch.me/).
